@@ -25,6 +25,10 @@ const levels = [
 ];
 
 let currentLevel = 1;
+let isCommandTab = true;
+
+const commandTab = document.getElementById("command");
+const programTab = document.getElementById("program");
 
 function buildPathGrid() {
   const pathGrid = document.getElementById("path-grid");
@@ -55,5 +59,20 @@ function buildPathGrid() {
 
   pathGrid.append(...paths);
 }
+
+function handleOptionTabClick(isCommandClicked) {
+  isCommandTab = isCommandClicked;
+
+  if (isCommandTab) {
+    programTab.classList.remove("active");
+    commandTab.classList.add("active");
+  } else {
+    commandTab.classList.remove("active");
+    programTab.classList.add("active");
+  }
+}
+
+programTab.addEventListener("click", () => handleOptionTabClick(false));
+commandTab.addEventListener("click", () => handleOptionTabClick(true));
 
 buildPathGrid();

@@ -291,10 +291,19 @@ body {
   font-size: 1.4rem;
   font-weight: 600;
   padding: 1rem 0;
+  transition:
+    border-bottom 0.2s linear,
+    color 0.2s linear,
+    margin-bottom 0.2s linear;
+  margin-bottom: -2px;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.option-title:hover {
+  cursor: pointer;
 }
 
 .option-title.active {
   color: var(--text-command);
-  border-bottom: 2px solid var(--text-command);
-  margin-bottom: -2px;
+  border-bottom-color: var(--text-command);
 }
