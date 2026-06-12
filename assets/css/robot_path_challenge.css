@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Fredoka";
   src: url("../fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.woff2")
@@ -31,6 +37,12 @@
 
   --bg-passed-box: #1f5074;
   --color-passed-dot: #03dd82;
+
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
 }
 
 .font-sonali-borno {
@@ -46,8 +58,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 50px;
+  height: 4rem;
+  width: 4rem;
 }
 
 .wall-icon {
@@ -55,8 +67,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
 }
 
 .star-icon {
@@ -64,8 +76,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
 }
 
 .diamond-icon {
@@ -73,8 +85,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
 }
 
 .light-bulb-icon {
@@ -82,8 +94,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
 }
 
 .point-icon {
@@ -91,8 +103,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
 }
 
 .trophy-icon {
@@ -100,6 +112,57 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50px;
-  width: 50px;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.navbar-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.brand-title {
+  font-size: 1.4rem;
+  color: var(--text-command);
+  font-weight: 600;
+  margin: 0;
+}
+
+.game-level {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+.trophy-score-container {
+  border: 1px solid var(--text-command);
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 5.5rem;
+  width: 5.5rem;
+  background-color: color-mix(in srgb, var(--text-command) 10%, transparent);
+}
+
+#trophy-score {
+  color: var(--text-command);
+  font-size: 1.4rem;
 }
