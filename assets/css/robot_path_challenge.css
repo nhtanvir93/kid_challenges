@@ -5,6 +5,18 @@
   font-display: swap;
 }
 
-* {
+@font-face {
+  font-family: "Sonali Borno";
+  src: url("../fonts/Sonali_Borno/FN\ Sonali\ Borno\ Unicode.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+.font-sonali-borno {
+  font-family: "Sonali Borno";
+  font-size: 20px;
+}
+
+.font-fredoka {
   font-family: "Fredoka";
 }
