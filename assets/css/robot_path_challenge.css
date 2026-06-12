@@ -35,9 +35,71 @@
 
 .font-sonali-borno {
   font-family: "Sonali Borno";
-  font-size: 20px;
 }
 
 .font-fredoka {
   font-family: "Fredoka";
+}
+
+.robot-icon {
+  background-image: url("../images/robot_path_challenge/robot.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.wall-icon {
+  background-image: url("../images/robot_path_challenge/brick-wall.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.star-icon {
+  background-image: url("../images/robot_path_challenge/star.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.diamond-icon {
+  background-image: url("../images/robot_path_challenge/diamond.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.light-bulb-icon {
+  background-image: url("../images/robot_path_challenge/light-bulb.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.point-icon {
+  background-image: url("../images/robot_path_challenge/point.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.trophy-icon {
+  background-image: url("../images/robot_path_challenge/trophy.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
 }
