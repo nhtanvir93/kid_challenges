@@ -192,3 +192,26 @@ body {
   letter-spacing: 1px;
   color: var(--text-color);
 }
+
+#path-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: var(--bg-color);
+  gap: 0.3rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+}
+
+.path {
+  background-color: color-mix(in srgb, white 10%, transparent);
+  border-radius: 2rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.path .icon {
+  height: 65%;
+  width: 65%;
+}
