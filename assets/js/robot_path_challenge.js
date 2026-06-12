@@ -30,6 +30,9 @@ let isCommandTab = true;
 const commandTab = document.getElementById("command");
 const programTab = document.getElementById("program");
 
+const commandPanel = document.getElementById("command-panel");
+const programPanel = document.getElementById("program-panel");
+
 function buildPathGrid() {
   const pathGrid = document.getElementById("path-grid");
 
@@ -65,10 +68,16 @@ function handleOptionTabClick(isCommandClicked) {
 
   if (isCommandTab) {
     programTab.classList.remove("active");
+    programPanel.classList.add("hide");
+
     commandTab.classList.add("active");
+    commandPanel.classList.remove("hide");
   } else {
     commandTab.classList.remove("active");
+    commandPanel.classList.add("hide");
+
     programTab.classList.add("active");
+    programPanel.classList.remove("hide");
   }
 }
 

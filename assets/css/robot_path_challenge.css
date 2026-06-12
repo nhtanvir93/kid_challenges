@@ -307,3 +307,7 @@ body {
   color: var(--text-command);
   border-bottom-color: var(--text-command);
 }
+
+.hide {
+  display: none;
+}
