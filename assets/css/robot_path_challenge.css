@@ -94,8 +94,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 5rem;
-  width: 5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .point-icon {
@@ -167,4 +167,28 @@ body {
   color: var(--text-command);
   font-size: 1.8rem;
   font-weight: 600;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.hint-container {
+  display: flex;
+  gap: 0.5rem;
+  background-color: color-mix(in srgb, var(--text-command) 10%, transparent);
+  padding: 0.5rem;
+  border-radius: 3rem;
+  border: 2px dashed var(--text-command);
+  justify-content: center;
+  align-items: center;
+}
+
+.hint {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--text-color);
 }
