@@ -116,6 +116,24 @@ body {
   width: 2.2rem;
 }
 
+.play-icon {
+  background-image: url("../images/robot_path_challenge/play-button.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.reset-icon {
+  background-image: url("../images/robot_path_challenge/undo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
 .navbar {
   width: 100%;
   background-color: var(--bg-color);
@@ -214,4 +232,38 @@ body {
 .path .icon {
   height: 70%;
   width: 70%;
+}
+
+.btn {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-family: "Fredoka";
+}
+
+.action-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-btns .btn {
+  width: 50%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-btn {
+  color: white;
+  background-color: black;
+}
+
+.run-btn {
+  color: white;
+  background-color: var(--color-passed-dot);
 }
