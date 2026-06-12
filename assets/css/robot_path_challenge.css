@@ -43,6 +43,9 @@
 
 body {
   margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .font-sonali-borno {
@@ -192,6 +195,7 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem 1rem;
+  flex: 1;
 }
 
 .hint-container {
@@ -217,7 +221,7 @@ body {
   background-color: var(--bg-color);
   gap: 0.5rem;
   padding: 0.8rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .path {
@@ -266,4 +270,31 @@ body {
 .run-btn {
   color: white;
   background-color: var(--color-passed-dot);
+}
+
+.command-and-program {
+  background-color: var(--bg-color);
+  border-radius: 1rem;
+  flex: 1;
+  font-family: "Fredoka";
+  padding: 1rem;
+}
+
+.options {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.option-title {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.option-title.active {
+  color: var(--text-command);
+  border-bottom: 2px solid var(--text-command);
+  margin-bottom: -2px;
 }
