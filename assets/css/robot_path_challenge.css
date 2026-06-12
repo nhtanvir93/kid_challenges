@@ -12,6 +12,27 @@
   font-display: swap;
 }
 
+:root {
+  --bg-color: #2a1962;
+
+  --arrow-up: #3598c3;
+  --arrow-down: #3dbfb6;
+  --arrow-left: #f18d31;
+  --arrow-right: #d7464f;
+
+  --bg-blank-box: #2b2057;
+  --bg-wall-box: #3e2467;
+  --bg-robot-box: #dd5c92;
+
+  --text-program: #4ecdc4;
+  --text-command: #ffd43a;
+  --text-color: #6b5b89;
+  --text-warning: #db403b;
+
+  --bg-passed-box: #1f5074;
+  --color-passed-dot: #03dd82;
+}
+
 .font-sonali-borno {
   font-family: "Sonali Borno";
   font-size: 20px;
