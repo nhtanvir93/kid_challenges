@@ -481,7 +481,7 @@ body {
 
 .hit-info {
   padding: 1rem;
-  border: 1px solid var(--text-program);
+  border: 2px solid var(--text-program);
   color: var(--text-program);
   display: flex;
   justify-content: center;
