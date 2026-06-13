@@ -24,6 +24,13 @@ const directions = {
   [RIGHT]: "Move Right",
 };
 
+const arrowIcons = {
+  [UP]: "arrow-up",
+  [DOWN]: "arrow-down",
+  [LEFT]: "arrow-left",
+  [RIGHT]: "arrow-right",
+};
+
 const levels = [
   [
     [WALL, WALL, WALL, WALL, WALL, WALL],
@@ -94,6 +101,7 @@ function handleOptionTabClick(isCommandClicked) {
     commandPanel.classList.add("hide");
     commandTab.classList.remove("active");
 
+    renderProgramMoves();
     programTab.classList.add("active");
     programPanel.classList.remove("hide");
   }
@@ -112,6 +120,57 @@ function renderProgramMoves() {
   if (isCommandTab) {
     return;
   }
+
+  const moveList = document.getElementById("move-list");
+
+  if (currentMoves.length === 0) {
+    const noCommand = document.createElement("div");
+    noCommand.classList.add("no-command");
+
+    const text = document.createElement("p");
+    text.textContent = "No command added yet!";
+
+    noCommand.appendChild(text);
+    moveList.replaceChildren(noCommand);
+
+    return;
+  }
+
+  const moves = [];
+
+  for (const [idx, { moveNo, label }] of currentMoves.entries()) {
+    const move = document.createElement("div");
+    move.classList.add("move");
+
+    const moveDetails = document.createElement("div");
+    moveDetails.classList.add("move-details");
+
+    const serial = document.createElement("div");
+    serial.classList.add("serial");
+    serial.textContent = idx + 1;
+
+    const icon = document.createElement("div");
+    icon.classList.add(arrowIcons[moveNo]);
+
+    const text = document.createElement("p");
+    text.textContent = directions[moveNo];
+
+    moveDetails.append(serial, icon, text);
+
+    const closeIconContainer = document.createElement("div");
+    closeIconContainer.classList.add("round-bg");
+
+    const closeIcon = document.createElement("div");
+    closeIcon.classList.add("close-icon");
+
+    closeIconContainer.appendChild(closeIcon);
+
+    move.append(moveDetails, closeIconContainer);
+
+    moves.push(move);
+  }
+
+  moveList.replaceChildren(...moves);
 }
 
 programTab.addEventListener("click", () => handleOptionTabClick(false));
