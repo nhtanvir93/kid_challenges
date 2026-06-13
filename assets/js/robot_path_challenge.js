@@ -12,6 +12,18 @@ const icons = {
   [DIAMOND]: "diamond-icon",
 };
 
+const UP = 0;
+const DOWN = 1;
+const LEFT = 2;
+const RIGHT = 3;
+
+const directions = {
+  [UP]: "Move Up",
+  [DOWN]: "Move Down",
+  [LEFT]: "Move Left",
+  [RIGHT]: "Move Right",
+};
+
 const levels = [
   [
     [WALL, WALL, WALL, WALL, WALL, WALL],
@@ -26,12 +38,18 @@ const levels = [
 
 let currentLevel = 1;
 let isCommandTab = true;
+let currentMoves = [];
 
 const commandTab = document.getElementById("command");
 const programTab = document.getElementById("program");
 
 const commandPanel = document.getElementById("command-panel");
 const programPanel = document.getElementById("program-panel");
+
+const upBtn = document.getElementById("btn-up");
+const downBtn = document.getElementById("btn-down");
+const leftBtn = document.getElementById("btn-left");
+const rightBtn = document.getElementById("btn-right");
 
 function buildPathGrid() {
   const pathGrid = document.getElementById("path-grid");
@@ -81,7 +99,27 @@ function handleOptionTabClick(isCommandClicked) {
   }
 }
 
+function handleMoveClick(moveNo) {
+  currentMoves.push({
+    moveNo,
+    label: directions[moveNo],
+  });
+
+  renderProgramMoves();
+}
+
+function renderProgramMoves() {
+  if (isCommandTab) {
+    return;
+  }
+}
+
 programTab.addEventListener("click", () => handleOptionTabClick(false));
 commandTab.addEventListener("click", () => handleOptionTabClick(true));
+
+upBtn.addEventListener("click", () => handleMoveClick(UP));
+downBtn.addEventListener("click", () => handleMoveClick(DOWN));
+leftBtn.addEventListener("click", () => handleMoveClick(LEFT));
+rightBtn.addEventListener("click", () => handleMoveClick(RIGHT));
 
 buildPathGrid();
