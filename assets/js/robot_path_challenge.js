@@ -67,14 +67,14 @@ function handleOptionTabClick(isCommandClicked) {
   isCommandTab = isCommandClicked;
 
   if (isCommandTab) {
-    programTab.classList.remove("active");
     programPanel.classList.add("hide");
+    programTab.classList.remove("active");
 
     commandTab.classList.add("active");
     commandPanel.classList.remove("hide");
   } else {
-    commandTab.classList.remove("active");
     commandPanel.classList.add("hide");
+    commandTab.classList.remove("active");
 
     programTab.classList.add("active");
     programPanel.classList.remove("hide");

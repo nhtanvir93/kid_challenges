@@ -43,10 +43,11 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 320px;
+  min-width: 320px;
+  max-width: 360px;
   margin: 0 auto;
   border: 1px solid var(--bg-color);
 }
@@ -145,8 +146,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 .arrow-down {
@@ -154,8 +155,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 1.8rem;
+  width: 1.8rem;
   transform: rotate(180deg);
 }
 
@@ -164,8 +165,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 1.8rem;
+  width: 1.8rem;
   transform: rotate(-90deg);
 }
 
@@ -174,8 +175,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 1.8rem;
+  width: 1.8rem;
   transform: rotate(90deg);
 }
 
@@ -285,6 +286,11 @@ body {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   font-family: "Fredoka";
+  cursor: pointer;
+}
+
+.btn:active {
+  opacity: 0.9;
 }
 
 .action-btns {
@@ -317,7 +323,6 @@ body {
 .command-and-program {
   background-color: var(--bg-color);
   border-radius: 1rem;
-  flex: 1;
   font-family: "Fredoka";
   padding: 1rem;
 }
@@ -334,9 +339,9 @@ body {
   font-weight: 600;
   padding: 1rem 0;
   transition:
-    border-bottom 0.2s linear,
-    color 0.2s linear,
-    margin-bottom 0.2s linear;
+    border-bottom 0.1s linear,
+    color 0.1s linear,
+    margin-bottom 0.1s linear;
   margin-bottom: -2px;
   border-bottom: 2px solid var(--text-color);
 }
@@ -352,4 +357,48 @@ body {
 
 .hide {
   display: none;
+}
+
+.option-panel {
+  padding: 1rem 0;
+}
+
+.command-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.command-container .btn {
+  width: calc(50% - 0.5rem);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-up {
+  background-color: var(--arrow-up);
+  color: white;
+}
+
+#btn-down {
+  background-color: var(--arrow-down);
+  color: white;
+}
+
+#btn-left {
+  background-color: var(--arrow-left);
+  color: white;
+}
+
+#btn-right {
+  background-color: var(--arrow-right);
+  color: white;
 }

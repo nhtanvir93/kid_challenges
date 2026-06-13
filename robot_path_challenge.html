@@ -52,15 +52,27 @@
           <div class="option-title active" id="command">Command</div>
           <div class="option-title" id="program">Program</div>
         </div>
-        <div id="command-panel">
-          <h1>Command</h1>
+        <div id="command-panel" class="option-panel">
+          <div class="command-container">
+            <button class="btn" id="btn-up">
+              <div class="arrow-up"></div>
+              Move Up
+            </button>
+            <button class="btn" id="btn-left">
+              <div class="arrow-left"></div>
+              Move Left
+            </button>
+            <button class="btn" id="btn-down">
+              <div class="arrow-down"></div>
+              Move Down
+            </button>
+            <button class="btn" id="btn-right">
+              <div class="arrow-right"></div>
+              Move Right
+            </button>
+          </div>
         </div>
-        <div id="program-panel" class="hide">
-          <h1>Program</h1>
-        </div>
-      </div>
-      <div style="background-color: black">
-        <div class="arrow-up"></div>
+        <div id="program-panel" class="hide option-panel"></div>
       </div>
     </main>
     <script src="./assets/js/robot_path_challenge.js"></script>
