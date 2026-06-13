@@ -46,6 +46,9 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  border: 1px solid var(--bg-color);
 }
 
 .font-sonali-borno {
@@ -135,6 +138,45 @@ body {
   background-repeat: no-repeat;
   height: 2.2rem;
   width: 2.2rem;
+}
+
+.arrow-up {
+  background-image: url("../images/robot_path_challenge/up-arrow.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.arrow-down {
+  background-image: url("../images/robot_path_challenge/up-arrow.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 2.2rem;
+  width: 2.2rem;
+  transform: rotate(180deg);
+}
+
+.arrow-left {
+  background-image: url("../images/robot_path_challenge/up-arrow.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 2.2rem;
+  width: 2.2rem;
+  transform: rotate(-90deg);
+}
+
+.arrow-right {
+  background-image: url("../images/robot_path_challenge/up-arrow.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 2.2rem;
+  width: 2.2rem;
+  transform: rotate(90deg);
 }
 
 .navbar {
