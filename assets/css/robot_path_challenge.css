@@ -127,8 +127,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 1.4rem;
+  width: 1.4rem;
 }
 
 .reset-icon {
@@ -136,8 +136,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 1.4rem;
+  width: 1.4rem;
 }
 
 .arrow-up {
@@ -308,8 +308,7 @@ body {
 
 .action-btns .btn {
   width: 50%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 0.6rem 0;
   font-size: 1.6rem;
   font-weight: 600;
   display: flex;
