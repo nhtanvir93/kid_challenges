@@ -116,6 +116,11 @@ function handleMoveClick(moveNo) {
   renderProgramMoves();
 }
 
+function removeMove(idx) {
+  currentMoves.splice(idx, 1);
+  renderProgramMoves();
+}
+
 function renderProgramMoves() {
   if (isCommandTab) {
     return;
@@ -158,7 +163,8 @@ function renderProgramMoves() {
     moveDetails.append(serial, icon, text);
 
     const closeIconContainer = document.createElement("div");
-    closeIconContainer.classList.add("round-bg");
+    closeIconContainer.classList.add("round-bg", "cursor-pointer");
+    closeIconContainer.addEventListener("click", () => removeMove(idx));
 
     const closeIcon = document.createElement("div");
     closeIcon.classList.add("close-icon");

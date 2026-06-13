@@ -462,6 +462,10 @@ body {
   padding-left: 1px;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .no-command {
   font-family: "Fredoka";
   text-align: center;
