@@ -358,9 +358,14 @@ body {
   cursor: pointer;
 }
 
-.option-title.active {
+#command.active {
   color: var(--text-command);
   border-bottom-color: var(--text-command);
+}
+
+#program.active {
+  color: var(--text-program);
+  border-bottom-color: var(--text-program);
 }
 
 .hide {
@@ -472,4 +477,23 @@ body {
   font-size: 1.3rem;
   color: var(--text-warning);
   font-weight: 600;
+}
+
+.hit-info {
+  padding: 1rem;
+  border: 1px solid var(--text-program);
+  color: var(--text-program);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.second-hit-info {
+  height: 2px;
+  width: 12px;
+  background-color: var(--text-program);
 }

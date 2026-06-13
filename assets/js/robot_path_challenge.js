@@ -176,7 +176,24 @@ function renderProgramMoves() {
     moves.push(move);
   }
 
-  moveList.replaceChildren(...moves);
+  const hitInfo = document.createElement("div");
+  hitInfo.classList.add("hit-info");
+
+  const totalMoves = currentMoves.length;
+  const firstHitInfo = document.createElement("div");
+  firstHitInfo.classList.add("first-hit-info");
+  firstHitInfo.textContent = `${totalMoves} ${totalMoves > 1 ? "commands" : "command"}`;
+
+  const secondHitInfo = document.createElement("div");
+  secondHitInfo.classList.add("second-hit-info");
+
+  const thirdHitInfo = document.createElement("div");
+  thirdHitInfo.classList.add("third-hit-info");
+  thirdHitInfo.textContent = "hit Run!";
+
+  hitInfo.append(firstHitInfo, secondHitInfo, thirdHitInfo);
+
+  moveList.replaceChildren(...moves, hitInfo);
 }
 
 programTab.addEventListener("click", () => handleOptionTabClick(false));
